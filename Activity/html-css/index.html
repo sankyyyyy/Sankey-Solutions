@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <section>
+                <div class="item1">
+                    <img src="img1.jpg" alt="mountain image">
+                </div>
+            </section>
+            <section>
+                <div class="item2">
+                    <div class="login">
+                        <p>Welcome back</p>
+                        <p id="login-text"><b>Login to your account</b></p>
+                        <form>
+                            <label for="email">Email</label><br>
+                            <input type="email" name="email" id="email" placeholder="John.snow@gmail.com" required><br>
+                            <label for="password">Password</label><br>
+                            <input type="password" name="password" id="password" placeholder="**********" required><br>
+                            <p id="error-msg"></p>
+                            <p id="success-msg"></p>
+                            <input type="radio" value="radio" id="rememberme">
+                            <label for="rememberme">Remember me</label> 
+                            <a href="#" id="forgot">Forgot password?</a>
+                            <input type="button" value="Submit" onclick="validate()">
+                            <button>
+                                <div class="google-container">
+                                    <img src="google.png" id="google" alt="google image">Or Sign-in with google
+                                </div>
+                            </button>
+                        </form>
+                        <div id="bottom"><p>Don't have account?<a href="#">Join Free Today </a></p></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+
+</html>
