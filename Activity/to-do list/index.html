@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To-do List</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="activity-form">
+                <label for="activity">Activity:</label>
+                <input type="text" name="activity" id="activity" placeholder="Enter Activity Name" required>
+                
+                <label for="start">Start Date:</label>
+                <input type="date" name="start" id="start" required>
+                
+                <label for="end">End Date:</label>
+                <input type="date" name="end" id="end" required>
+                <p id="invalid-start"></p>
+
+                <label for="status">Status:</label>
+                <select name="status" id="status">
+                    <option disabled selected hidden value="">Select Status</option>
+                    <option value="started">Started</option>
+                    <option value="not-started">Not-Started</option>
+                    <option value="in-progress">In-Progress</option>
+                    <option value="completed">Completed</option>
+                    <option value="due-passed">Due-Passed</option>
+                </select>
+                <div class="buttons">
+                    <input type="reset" value="RESET">
+                    <input type="button" value="ADD">
+                    <input type="button" value="CANCEL">
+                    <input type="button" value="EDIT">
+                </div>
+            </form>
+        </div>
+        <div class="table-container">
+            <h2>Activities</h2>
+            <p></p>
+            <table>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
