@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Employee</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>Employee Portal</h1>
+        </header>
+        <main class="flex-container">
+            <section class="form-section">
+                <!-- <div class="container"> -->
+                        <h2>Employees Form</h2>
+                    <form class="main_form">
+                        <label for="e_id">Id:</label>
+                        <input type="number" name="e_id" id="e_id" placeholder="Enter Employee ID" oninput="check_id()" required>
+                        <p id="invalid_id"></p>
+                        
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter full name" oninput="checkName()" required>
+                        <p id="invalid_name"></p>
+
+                        
+                        <label for="age">Age:</label>
+                        <input type="number" name="age" id="age" placeholder="Enter age eg.34" oninput="check_age()" required>
+                        <p id="invalid_age"></p>
+                        <br>
+<!--  -->
+                        <div class="gender-container">
+                            <label for="gender">Gender:</label>
+                            <select name="gender" id="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select><br>
+                        </div>
+
+                    <input type="button" id="btn" class="common-btn common-btn--alert" value="Add" onclick="Add()">
+                    <div id="editable_btn"></div>
+                    <p id="invalid_data"></p>
+                </form>
+                <!-- </div> -->
+            </section>
+            <section class="table-section">
+                <div class="show">
+                    <header>
+                        <h2>Employee Details</h2>
+                    </header>
+                    <div class="table-container">
+                        <table>
+                            <tbody id="show">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="validate.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
